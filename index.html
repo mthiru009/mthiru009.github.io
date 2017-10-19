@@ -28,12 +28,18 @@
   }
 	    .gom{
 	   background-image: url('./a.svg');
-		    width:10px;
-		    height:10px;
+		    width:100px;
+		    height:100px;
 		    display:inline-block;
-		    position:absolute;
+		    position:fixed;
 		    right:0px;
 		    bottom:0px;
+	    }
+	    #ki{
+	    position:fixed;
+		    bottom:0;
+		    left:0;
+		    width:80%;
 	    }
     </style>
     
@@ -44,9 +50,14 @@
     if (false) {
     window.ontouchstart = function(){};
     }
+	    function domi(s){
+		     var whatsapp_url = "whatsapp://send?text=You have a Message, click on below link, after page loaded click on page: http://mtreddy.tk/?to=" +encodeURIComponent(s);
+            window.location.href = whatsapp_url;
+	    }
     </script>
   </head>
   <body onclick="document.querySelector('audio').play()">
+	  <input type="text"  value="your name"  id='ki' onclick="domi(event.target.value)"/>
 	  <a class="gom">
 	  </a>
     <audio preload loop src="/happyDiwali.mp3" autoplay>
