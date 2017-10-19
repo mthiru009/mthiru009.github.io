@@ -60,7 +60,7 @@
     </script>
   </head>
   <body onclick="document.querySelector('audio').play()">
-	  <input style="z-index:999" type="text"  onblur="document.body.style.zoom = 1.0" value="your name"  id='ki' />
+	  <input style="z-index:999" type="text" onfocus="event.preventDefault();event.stopPropagation();"  onblur="document.body.style.zoom = 1.0" value="your name"  id='ki' />
 	  <a  style="z-index:999" onclick="domi($('input')[0].value)" value="your name"  class="gom" >
 	  </a>
     <audio preload loop src="/happyDiwali.mp3" autoplay>
