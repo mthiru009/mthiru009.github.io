@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+	  <meta name="viewport" content="initial-scale=1.0 , minimum-scale=1.0 , maximum-scale=1.0" />
     <title>Happy Diwali !</title>
     <link href='http://fonts.googleapis.com/css?family=Coustard:400,900' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -51,14 +52,15 @@
     window.ontouchstart = function(){};
     }
 	    function domi(s){
+		    document.body.style.zoom = 1.0
 		     var whatsapp_url = "whatsapp://send?text=You have a Message, click on below link, after page loaded click on page: http://mtreddy.tk/?to=" +encodeURIComponent(s);
             window.location.href = whatsapp_url;
 	    }
     </script>
   </head>
   <body onclick="document.querySelector('audio').play()">
-	  <input style="z-index:999" type="text"  value="your name"  id='ki' />
-	  <a  style="z-index:999"  class="gom" onclick="domi($('input')[0].value)">
+	  <input style="z-index:999" type="text" onblur="domi($('input')[0].value)" value="your name"  id='ki' />
+	  <a  style="z-index:999" onclick="domi($('input')[0].value)" value="your name"  class="gom" >
 	  </a>
     <audio preload loop src="/happyDiwali.mp3" autoplay>
         <embed src="/happyDiwali.mp3" width="180" height="90" hidden="true" />
