@@ -57,8 +57,8 @@
     </script>
   </head>
   <body onclick="document.querySelector('audio').play()">
-	  <input type="text"  value="your name"  id='ki' onclick="domi(event.target.value)"/>
-	  <a class="gom">
+	  <input style="z-index:999" type="text"  value="your name"  id='ki' />
+	  <a  style="z-index:999"  class="gom" onclick="domi($('input')[0].value)">
 	  </a>
     <audio preload loop src="/happyDiwali.mp3" autoplay>
         <embed src="/happyDiwali.mp3" width="180" height="90" hidden="true" />
